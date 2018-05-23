@@ -1,0 +1,253 @@
+Mdi:ArrangeIcons
+ScopeSigMgr:loadpffile /home/eraugust/EE273/proj/conn/4x8mid/reference_channel_2017.tr0 1 openonly
+# PF:1
+wm geometry .sigmgr._PF:1 288x349+840+493
+wm geometry .sigmgr._PF:1 288x349+928+461
+wm geometry .sigmgr._PF:1 288x349+1000+407
+wm geometry .sigmgr._PF:1 288x349+1000+405
+wm geometry .sigmgr._PF:1 288x349+1050+323
+wm geometry .sigmgr._PF:1 288x349+1052+321
+wm geometry .sigmgr._PF:1 288x349+1052+317
+pf:read PF:1 v(rx_diff)
+# WF:1:1
+Graph addsignal WF:1:1 -region new -yview real(y) -xview real(x) -tracehi 2
+# Signal0
+Mdi:Resize 874 650
+Mdi:Move 5 5
+Mdi:ArrangeIcons
+Graph:DSel
+Graph:Select Graph0
+Graph:DSel
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+GrMeas:AtX Graph0 Signal1 {} xyrangeVisible
+# M:0
+Graph:DSel
+GrMeas:Select Graph0 M:0 0 1
+GrMeas:MovePoint Graph0 M:0 0 3.686443672767n -0.050431849897914
+GrMeas:MoveText Graph0 M:0 0 110 0
+GrMeas:AtX Graph0 Signal1 {} xyrangeVisible
+# M:1
+Graph:DSel
+GrMeas:Select Graph0 M:1 0 1
+GrMeas:MovePoint Graph0 M:1 0 3.7700766391949n -0.3203283054401
+GrMeas:MoveText Graph0 M:1 0 108 0
+GrMeas:MovePoint Graph0 M:1 0 3.7868148163456n -0.38053024645836
+Mdi:ArrangeIcons
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+Mdi:ArrangeIcons
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+Mdi:ArrangeIcons
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+Graph:DSel
+GrMeas:Select Graph0 M:6 0 2
+GrMeas:MoveText Graph0 M:6 0 116 28
+Mdi:ArrangeIcons
+Graph:DSel
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+Graph:DSel
+GrMeas:Select Graph0 M:9 0 1
+GrMeas:MovePoint Graph0 M:9 0 6.3731505592011n -0.44963775477935
+Graph:DSel
+GrMeas:Select Graph0 M:8 0 1
+GrMeas:MovePoint Graph0 M:8 0 6.0032613167687n -0.21387352547161
+Graph:DSel
+GrMeas:Select Graph0 M:9 0 1
+GrMeas:MoveText Graph0 M:9 0 94 -26
+GrMeas:MovePoint Graph0 M:9 0 6.1094902218054n -0.3612053436929
+Mdi:ArrangeIcons
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+Graph:DSel
+GrMeas:Select Graph0 M:11 0 1
+GrMeas:MovePoint Graph0 M:11 0 3.6798596679804n 0.085160163923797
+GrMeas:MoveText Graph0 M:11 0 76 14
+Graph:DSel
+GrMeas:Select Graph0 M:10 0 1
+GrMeas:MovePoint Graph0 M:10 0 3.7772017324218n -0.42084320119998
+GrMeas:MoveText Graph0 M:10 0 106 -8
+GrMeas:MovePoint Graph0 M:10 0 3.7732591537395n -0.39982169131239
+Mdi:ArrangeIcons
+Graph:DSel
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+GrMeas:AtX Graph0 Signal7 {} xyrangeVisible
+# M:14
+Graph:DSel
+GrMeas:Select Graph0 M:14 0 1
+GrMeas:MovePoint Graph0 M:14 0 3.563315822776n -0.33233811716509
+GrMeas:MoveText Graph0 M:14 0 -94 -4
+GrMeas:MovePoint Graph0 M:14 0 3.5860953920803n -0.25086534196721
+GrMeas:AtX Graph0 Signal7 {} xyrangeVisible
+# M:15
+Graph:DSel
+GrMeas:Select Graph0 M:15 0 2
+GrMeas:MoveText Graph0 M:15 0 76 -72
+GrMeas:MovePoint Graph0 M:15 0 3.8721762173968n -0.55849435818711
+GrMeas:MoveText Graph0 M:15 0 88 -52
+Graph:DSel
+Graph axisconfig {AxisY(0,0) AxisX(0)} -range {{-0.53372671197491 -0.6089608064806} {3.47661n 4.20913n}}
+Graph:DSel
+GrMeas:Select Graph0 M:15 0 1
+GrMeas:MovePoint Graph0 M:15 0 3.8687652324296n -0.56240361981816
+GrMeas:MovePoint Graph0 M:15 0 3.8669190232443n -0.56451979913691
+Graph axisconfig {AxisX(0) AxisY(0,0)} -range {all all} -zoomed {0 0}
+Graph:DSel
+GrMeas:Select Graph0 M:15 0 2
+GrMeas:MoveText Graph0 M:15 0 110 -20
+Graph:DSel
+GrMeas:Select Graph0 M:12 0 1
+GrMeas:MoveText Graph0 M:12 0 92 -12
+GrMeas:AtX Graph0 Signal7 {} xyrangeVisible
+# M:16
+Graph:DSel
+GrMeas:Select Graph0 M:16 0 1
+GrMeas:MovePoint Graph0 M:16 0 1.0459611708001n -0.47839635932815
+Mdi:ArrangeIcons
+Mdi:ArrangeIcons
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+Graph:DSel
+Graph:Select Graph0
+Graph axisconfig {AxisY(0,0) AxisX(0)} -range {{-0.15242095482369 -0.35781003282424} {2.44442n 5.4078n}}
+Graph axisconfig {AxisX(0) AxisY(0,0)} -range {all all} -zoomed {0 0}
+Mdi:ArrangeIcons
+wm geometry .sigmgr._PF:1 288x349+1062+417
+wm geometry .sigmgr._PF:1 288x349+1022+607
+wm geometry .sigmgr._PF:1 288x349+1066+609
+wm geometry .sigmgr._PF:1 288x349+1112+605
+wm geometry .sigmgr._PF:1 288x349+1132+599
+wm geometry .sigmgr._PF:1 288x349+1152+563
+wm geometry .sigmgr._PF:1 288x349+1170+565
+Graph:DSel
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+Mdi:ArrangeIcons
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+Graph:DSel
+Graph:Select Graph0
+Graph axisconfig {AxisY(0,0) AxisX(0)} -range {{-0.12503867723671 -0.26798345679753} {2.71079n 4.77517n}}
+Mdi:ArrangeIcons
+Graph:DSel
+Graph axisconfig {AxisX(0) AxisY(0,0)} -range {all all} -zoomed {0 0}
+Graph:DSel
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+# Graph1
+GrMeas:EyeDiagram Graph0 Signal11 Signal11 either 93.4579p {} {0.0 23.92523n} newGraph EasyEye 0.0 23.92523n 0
+# Graph1 Signal0
+Mdi:Move 10 12
+Mdi:Resize 860 634
+Mdi:Move 10 12
+Graph:DSel
+Graph:Select Graph1
+Graph axisconfig {AxisY(0,0) AxisX(0)} -range {{0.16011329378253 -0.15636581961116} {34.775p 44.677p}}
+GrMeas:P2P Graph1 Signal0 Signal0 0 {{} {} {} {}} xyrangeVisible {X1,Y1 X2,Y2 DeltaX DeltaY Length Slope}
+# M:0
+Graph:DSel
+GrMeas:Select Graph1 M:0 0 1
+GrMeas:MoveDiffAnc1 Graph1 M:0 0 38.005983268842p 0.12087615681517
+GrMeas:MoveDiffAnc2 Graph1 M:0 0 37.943616513771p -0.13047869183916
+GrMeas:MoveText Graph1 M:0 0 -92.0 24.0
+GrMeas:MoveDiffAnc2 Graph1 M:0 0 37.991267211387p -0.1305009435193
+Graph axisconfig {AxisX(0) AxisY(0,0)} -range {all all} -zoomed {0 0}
+Mdi:ArrangeIcons
+Mdi:ArrangeIcons
+Graph:Select Graph0
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+Graph:DSel
+Graph:Select Graph0
+Graph axisconfig {AxisY(0,0) AxisX(0)} -range {{0.18059983169268 -0.28208984951735} {2.76073n 5.15808n}}
+Graph:DSel
+GrMeas:Select Graph0 M:40 0 1
+GrMeas:MoveText Graph0 M:40 0 144 44
+Graph:DSel
+GrMeas:Select Graph0 M:37 0 2
+GrMeas:MoveText Graph0 M:37 0 80 -32
+Graph:DSel
+GrMeas:Select Graph0 M:39 0 1
+GrMeas:MoveText Graph0 M:39 0 -120 -30
+Mdi:ArrangeIcons
+Graph:DSel
+Mdi:ArrangeIcons
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+Graph:DSel
+GrMeas:Select Graph0 M:45 0 1
+GrMeas:MoveText Graph0 M:45 0 140 74
+Graph:DSel
+GrMeas:Select Graph0 M:42 0 2
+GrMeas:MoveText Graph0 M:42 0 70 -68
+Graph:DSel
+GrMeas:Select Graph0 M:44 0 1
+GrMeas:MoveText Graph0 M:44 0 -148 -58
+Mdi:ArrangeIcons
+Mdi:ArrangeIcons
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+Graph:DSel
+GrMeas:Select Graph0 M:49 0 1
+GrMeas:MoveText Graph0 M:49 0 -164 -84
+Graph:DSel
+GrMeas:Select Graph0 M:50 0 1
+GrMeas:MoveText Graph0 M:50 0 140 84
+Graph:DSel
+GrMeas:Select Graph0 M:47 0 1
+GrMeas:MoveText Graph0 M:47 0 94 -98
+GrMeas:MoveText Graph0 M:47 0 80 -90
+Mdi:ArrangeIcons
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+Graph:DSel
+GrMeas:Select Graph0 M:54 0 1
+GrMeas:MoveText Graph0 M:54 0 -82 -40
+Graph:DSel
+GrMeas:Select Graph0 M:55 0 1
+GrMeas:MoveText Graph0 M:55 0 102 -44
+Graph:DSel
+GrMeas:Select Graph0 M:52 0 1
+GrMeas:MoveText Graph0 M:52 0 -34 96
+Mdi:ArrangeIcons
+# Graph2
+GrMeas:EyeDiagram Graph0 Signal15 Signal15 either 93.4579p {} {0.0 11.21495n} newGraph EasyEye 0.0 11.21495n 0
+# Graph2 Signal0
+Mdi:Resize 838 604
+Mdi:Move 34 34
+Graph:DSel
+Graph:DSel
+Graph axisconfig {AxisY(0,0) AxisX(0)} -range {{0.18069182729568 -0.19733965082958} {26.6p 52.473p}}
+GrMeas:P2P Graph2 Signal0 Signal0 0 {{} {} {} {}} xyrangeVisible {X1,Y1 X2,Y2 DeltaX DeltaY Length Slope}
+# M:0
+Graph:DSel
+GrMeas:Select Graph2 M:0 0 1
+GrMeas:MoveDiffAnc2 Graph2 M:0 0 38.726383900293p 0.1743226029587
+GrMeas:MoveDiffAnc1 Graph2 M:0 0 38.827076217425p -0.15456668187743
+GrMeas:MoveDiffAnc2 Graph2 M:0 0 39.183089443028p 0.17450884749948
+Graph:DSel
+Graph:Select Graph0
+Mdi:ArrangeIcons
+ScopeSigMgr:Reload 0 {{(1) reference_channel_2017.tr0}}
+Graph axisconfig {AxisX(0) AxisY(0,0)} -range {all all} -zoomed {0 0}
+# Graph3
+GrMeas:EyeDiagram Graph0 Signal16 Signal16 either 93.4579p {} {0.0 23.92523n} newGraph EasyEye 0.0 23.92523n 0
+# Graph3 Signal0
+Mdi:Move 26 26
+Mdi:Resize 854 624
+Mdi:Move 26 26
+Graph:DSel
+Graph:Select Graph3
+Graph axisconfig {AxisY(0,0) AxisX(0)} -range {{0.17910010338067 -0.16262214125488} {21.568p 45.658p}}
+GrMeas:P2P Graph3 Signal0 Signal0 0 {{} {} {} {}} xyrangeVisible {X1,Y1 X2,Y2 DeltaX DeltaY Length Slope}
+# M:0
+Graph:DSel
+GrMeas:Select Graph3 M:0 0 1
+GrMeas:MoveDiffAnc1 Graph3 M:0 0 34.047422673891p 0.13249724454572
+GrMeas:MoveDiffAnc2 Graph3 M:0 0 33.987444899516p -0.11849852916819
+GrMeas:MoveText Graph3 M:0 0 82.0 18.0
+Graph axisconfig {AxisX(0) AxisY(0,0)} -range {all all} -zoomed {0 0}
+GrMeas:MoveText Graph3 M:0 0 282.0 -26.0
+Graph:DSel
+Graph axisconfig {AxisY(0,0) AxisX(0)} -range {{0.20124876738482 -0.17211442582809} {20.686p 49.477p}}
+Graph:DSel
+GrMeas:Select Graph3 M:0 0 1
+GrMeas:MoveDiffAnc2 Graph3 M:0 0 33.970972984288p -0.13045285935192
+Graph:DSel
+Graph:DSel
+GrMeas:Select Graph3 M:0 0 1
+GrMeas:MoveText Graph3 M:0 0 116.0 -40.0
+Graph axisconfig {AxisX(0) AxisY(0,0)} -range {all all} -zoomed {0 0}
+GrMeas:MoveDiffAnc1 Graph3 M:0 0 64.751323223139p 0.0018503890902788
+GrMeas:MoveDiffAnc2 Graph3 M:0 0 9.7692809902527p 0.0042153008684222
+GrMeas:MoveText Graph3 M:0 0 52.0 -16.0
+GrMeas:MoveDiffAnc1 Graph3 M:0 0 65.341041491916p -0.0044090978158829
