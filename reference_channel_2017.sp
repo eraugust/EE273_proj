@@ -17,14 +17,14 @@
 .PARAM simtime	= '256/bps'	* USE THIS RUNTIME FOR EYE DIAGRAM
 
 * CTLE Settings *
- .PARAM az1     = 0.6g            * CTLE zero frequency, Hz
- .PARAM ap1     = 3.5g           * CTLE primary pole frequency, Hz
+ .PARAM az1     = 35k            * CTLE zero frequency, Hz
+ .PARAM ap1     = 535k           * CTLE primary pole frequency, Hz
  .PARAM ap2     = 10g           * CTLE secondary pole frequency, Hz
 
 * Driver Pre-emphais *
- .PARAM pre1	= 0.22	* Driver pre-cursor pre-emphasis
- .PARAM post1	= 0.11	* Driver 1st post-cursor pre-emphasis
- .PARAM post2	= -0.08	* Driver 2nd post-cursor pre-emphasis
+ .PARAM pre1	= 0.20	* Driver pre-cursor pre-emphasis
+ .PARAM post1	= 0.25	* Driver 1st post-cursor pre-emphasis
+ .PARAM post2	= -0.02143	* Driver 2nd post-cursor pre-emphasis
 
 * Eye delay -- In awaves viewer, plot signal rx_diff against signal eye
 *              then adjust parameter edui to center the data eye.
@@ -54,7 +54,7 @@
 
 * PCB Line Lengths *
  .PARAM len1	= 9.57 *9		* Line segment 1 length, inches
- .PARAM len2	= 15.68		* Line segment 2 length, inches
+ .PARAM len2	= 0.25 *15.68		* Line segment 2 length, inches
  .PARAM len3	= 8.57 *4		* Line segment 3 length, inches
  .PARAM len4	= 1		* Line segment 4 length, inches
 
@@ -201,10 +201,10 @@ Xk2  0  jp9   jn9   jp8  jn8  (conn)		    * 4x8 Ortho connector stack
  R31  31 0  50
 
 * Connector *
-* S1 inp outp inn outn   5   6   7   8   9   10   11   12
-*+    13   14  15   16  17  18  19  20  21   22   23   24   MNAME=s_model
- S1  inp outp inn outn   5   6   7   8   9   10   11   12   13   14   15   16
-+     17   18  19   20  21  22  23  24  25   26   27   28   29   30   31   32  MNAME=s_model
+ S1 inp outp inn outn   5   6   7   8   9   10   11   12
++    13   14  15   16  17  18  19  20  21   22   23   24   MNAME=s_model
+* S1  inp outp inn outn   5   6   7   8   9   10   11   12   13   14   15   16
+*+     17   18  19   20  21  22  23  24  25   26   27   28   29   30   31   32  MNAME=s_model
 
 * Daughter Card Side Terminations *
 *R2    2 0  50
@@ -225,7 +225,7 @@ Xk2  0  jp9   jn9   jp8  jn8  (conn)		    * 4x8 Ortho connector stack
  R32  32 0  50
 
 * Connector S-parameter Model *
- .MODEL s_model S TSTONEFILE='./XCedePlus_4pr_97ohm_1p85mm_With_Extra_GND_2mm_Sig_3mm_GND_Wipe.s32p'
+ .MODEL s_model S TSTONEFILE='Orthogonal_rev12_Full_Final.s24p'
 *.MODEL s_model S TSTONEFILE='./XCedeplus_100ohm_2p68_Ortho_2mm_Sig_3mm_GND_Wipe_EF_GHpairs_Only_20144301_IdEM.s32p'
 
  .ENDS (conn)								*
@@ -323,4 +323,3 @@ Xk2  0  jp9   jn9   jp8  jn8  (conn)		    * 4x8 Ortho connector stack
 +	0.0	0.0	0.0
  .ENDDATA
  .END
-
