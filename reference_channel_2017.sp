@@ -13,18 +13,18 @@
 *************************************************************************
 *************************************************************************
 * Simulation Run Time *
-*.PARAM simtime	= '120/bps'	* USE THIS RUNTIME FOR PULSE RESPONSE
-.PARAM simtime	= '256/bps'	* USE THIS RUNTIME FOR EYE DIAGRAM
+*.PARAM simtime	= '64/bps'	* USE THIS RUNTIME FOR PULSE RESPONSE
+.PARAM simtime	= '512/bps'	* USE THIS RUNTIME FOR EYE DIAGRAM
 
 * CTLE Settings *
- .PARAM az1     = 35k            * CTLE zero frequency, Hz
- .PARAM ap1     = 535k           * CTLE primary pole frequency, Hz
+ .PARAM az1     = 0.8g            * CTLE zero frequency, Hz
+ .PARAM ap1     = 5.35g           * CTLE primary pole frequency, Hz
  .PARAM ap2     = 10g           * CTLE secondary pole frequency, Hz
 
 * Driver Pre-emphais *
- .PARAM pre1	= 0.20	* Driver pre-cursor pre-emphasis
- .PARAM post1	= 0.25	* Driver 1st post-cursor pre-emphasis
- .PARAM post2	= -0.02143	* Driver 2nd post-cursor pre-emphasis
+ .PARAM pre1	= 0.17384 	* Driver pre-cursor pre-emphasis
+ .PARAM post1	= 0.059 	* Driver 1st post-cursor pre-emphasis
+ .PARAM post2	= -0.096122 	* Driver 2nd post-cursor pre-emphasis
 
 * Eye delay -- In awaves viewer, plot signal rx_diff against signal eye
 *              then adjust parameter edui to center the data eye.
@@ -53,9 +53,9 @@
  .PARAM bps	= 10.7g 	* Bit rate, bits per second
 
 * PCB Line Lengths *
- .PARAM len1	= 9.57 *9		* Line segment 1 length, inches
- .PARAM len2	= 0.25 *15.68		* Line segment 2 length, inches
- .PARAM len3	= 8.57 *4		* Line segment 3 length, inches
+ .PARAM len1	= 8.74		* Line segment 1 length, inches
+ .PARAM len2	= 0.25		* Line segment 2 length, inches
+ .PARAM len3	= 4.91		* Line segment 3 length, inches
  .PARAM len4	= 1		* Line segment 4 length, inches
 
 * Package Parameters *
@@ -110,8 +110,8 @@
 Xk1  0  jp4   jn4   jp5  jn5  (conn)		    * 4x8 Ortho connector stack
 Xvp3 jp5 jp6 (mvia)
 Xvn3 jn5 jn6 (mvia)
-Tmp1    jp5 0 jp8 0 Z0=50 TD=40p		    * Through-midplane via
-Tmp2    jn5 0 jn8 0 Z0=50 TD=40p		    * Through-midplane via
+Tmp1    jp6 0 jp7 0 Z0=50 TD=40p		    * Through-midplane via
+Tmp2    jn6 0 jn7 0 Z0=50 TD=40p		    * Through-midplane via
 Xvp4 jp7 jp8 (mvia)
 Xvn4 jn7 jn8 (mvia)
 Xk2  0  jp9   jn9   jp8  jn8  (conn)		    * 4x8 Ortho connector stack
@@ -139,7 +139,7 @@ Xk2  0  jp9   jn9   jp8  jn8  (conn)		    * 4x8 Ortho connector stack
 
 * Behavioral Receiver *
  Rrp1  jrp 0  rterm
- Rrn1  jrn 0  rterm
+ Rrn1  jrn 0  rterm 
  Crp1  jrp 0  cload
  Crn1  jrn 0  cload
  Xctle jrp jrn outp outn  (rx_eq_diff) az1=az1 ap1=ap1 ap2=ap2
@@ -180,8 +180,8 @@ Xk2  0  jp9   jn9   jp8  jn8  (conn)		    * 4x8 Ortho connector stack
 *************************************************************************
 *************************************************************************
  .SUBCKT (conn) ref inp inn outp outn					*
-*    T1  inp ref outp ref Z0=50 TD=150p					*
-*    T2  inn ref outn ref Z0=50 TD=150p					*
+*    T1  inp ref outp ref Z0=48.5 TD=150p					*
+*    T2  inn ref outn ref Z0=48.5 TD=150p					*
 * Midplane Side Terminations *
 *R1    1 0  50
 *R3    3 0  50
@@ -247,7 +247,6 @@ Xk2  0  jp9   jn9   jp8  jn8  (conn)		    * 4x8 Ortho connector stack
 
 
 *SYSTEM_NAME : diff_stripline_DVN
-*
 *  ------------------------------------ Z = 2.108200e-04
 *  //// Top Ground Plane //////////////
 *  ------------------------------------ Z = 1.955800e-04
@@ -261,18 +260,18 @@ Xk2  0  jp9   jn9   jp8  jn8  (conn)		    * 4x8 Ortho connector stack
 * L(H/m), C(F/m), Ro(Ohm/m), Go(S/m), Rs(Ohm/(m*sqrt(Hz)), Gd(S/(m*Hz))
 
 .MODEL diff_stripline_DVN W MODELTYPE=RLGC, N=2
-+ Lo = 2.357177e-07
-+      8.611823e-09 2.357177e-07
-+ Co = 1.439261e-10
-+      -5.271907e-12 1.439261e-10
-+ Ro = 8.969925e+00
-+      0.000000e+00 8.969925e+00
++ Lo = 2.662789e-07
++      1.718876e-08 2.662789e-07
++ Co = 1.277836e-10
++      -8.268715e-12 1.277836e-10
++ Ro = 1.121241e+01
++      0.000000e+00 1.121241e+01
 + Go = 0.000000e+00
 +      -0.000000e+00 0.000000e+00
-+ Rs = 2.337429e-03
-+      7.777897e-05 2.337429e-03
-+ Gd = 2.260786e-11
-+      -8.281093e-13 2.260786e-11
++ Rs = 2.685059e-03
++      1.305979e-04 2.685059e-03
++ Gd = 2.007220e-11
++      -1.298847e-12 2.007220e-11
 *************************************************************************
 *************************************************************************
 
@@ -303,23 +302,23 @@ Xk2  0  jp9   jn9   jp8  jn8  (conn)		    * 4x8 Ortho connector stack
 *			Simulation Controls and Alters			*
 *                                                                       *
 *************************************************************************
-* .OPTIONS post ACCURATE
+ .OPTIONS post ACCURATE
 *.AC DEC 1000 (100k,10g) SWEEP DATA=plens
 * .TRAN 5p simtime SWEEP DATA=plens
 * .DATA	plens
 *+       az1     ap1     ap2	pre1
-*+	1k	1k	100g	0.0
+*+	0.8g	6g	10g	0.0
 *+	800meg	3.125g	100g	0.0
 *+	850meg	3.125g	10g	0.0
 *+	850meg	3.125g	10g	0.16
-*+	1g	3.125g	100g	0.0
+*+	1g	5.35g	10g	0.0
 
- .OPTIONS post ACCURATE
+* .OPTIONS post ACCURATE
  .TRAN 2p simtime *SWEEP DATA=plens
  .DATA	plens
 +	pre1	post1	post2
 +	0.0	0.0	0.0
-+	0.0	0.0	0.0
-+	0.0	0.0	0.0
+*+	0.0	0.0	0.0
+*+	0.0	0.0	0.0
  .ENDDATA
  .END
