@@ -17,14 +17,14 @@
 .PARAM simtime	= '512/bps'	* USE THIS RUNTIME FOR EYE DIAGRAM
 
 * CTLE Settings *
- .PARAM az1     = 0.8g            * CTLE zero frequency, Hz
+ .PARAM az1     = 2.3g            * CTLE zero frequency, Hz
  .PARAM ap1     = 5.35g           * CTLE primary pole frequency, Hz
  .PARAM ap2     = 10g           * CTLE secondary pole frequency, Hz
 
 * Driver Pre-emphais *
- .PARAM pre1	= 0.17384 	* Driver pre-cursor pre-emphasis
- .PARAM post1	= 0.059 	* Driver 1st post-cursor pre-emphasis
- .PARAM post2	= -0.096122 	* Driver 2nd post-cursor pre-emphasis
+ .PARAM pre1	= 0.07611 *0.06259 *0.06079  	* Driver pre-cursor pre-emphasis
+ .PARAM post1	= 0.00155 *0.00847 *0.00733   	* Driver 1st post-cursor pre-emphasis
+ .PARAM post2	= -0.014212 *-0.049635 *-0.0579  	* Driver 2nd post-cursor pre-emphasis
 
 * Eye delay -- In awaves viewer, plot signal rx_diff against signal eye
 *              then adjust parameter edui to center the data eye.
@@ -53,9 +53,9 @@
  .PARAM bps	= 10.7g 	* Bit rate, bits per second
 
 * PCB Line Lengths *
- .PARAM len1	= 8.74		* Line segment 1 length, inches
+ .PARAM len1	= 2.61 		* Line segment 1 length, inches
  .PARAM len2	= 0.25		* Line segment 2 length, inches
- .PARAM len3	= 4.91		* Line segment 3 length, inches
+ .PARAM len3	= 1.61		* Line segment 3 length, inches
  .PARAM len4	= 1		* Line segment 4 length, inches
 
 * Package Parameters *
@@ -246,13 +246,13 @@ Xk2  0  jp9   jn9   jp8  jn8  (conn)		    * 4x8 Ortho connector stack
  .ENDS (diff_stripline)
 
 
-*SYSTEM_NAME : diff_stripline_DVN
-*  ------------------------------------ Z = 2.108200e-04
+
+*  ------------------------------------ Z = 2.006600e-04
 *  //// Top Ground Plane //////////////
-*  ------------------------------------ Z = 1.955800e-04
+*  ------------------------------------ Z = 1.854200e-04
 *       diel_2   H = 9.144000e-05
-*  ------------------------------------ Z = 1.041400e-04
-*       diel_1   H = 8.890000e-05
+*  ------------------------------------ Z = 9.398000e-05
+*       diel_1   H = 7.874000e-05
 *  ------------------------------------ Z = 1.524000e-05
 *  //// Bottom Ground Plane ///////////
 *  ------------------------------------ Z = 0
@@ -260,18 +260,18 @@ Xk2  0  jp9   jn9   jp8  jn8  (conn)		    * 4x8 Ortho connector stack
 * L(H/m), C(F/m), Ro(Ohm/m), Go(S/m), Rs(Ohm/(m*sqrt(Hz)), Gd(S/(m*Hz))
 
 .MODEL diff_stripline_DVN W MODELTYPE=RLGC, N=2
-+ Lo = 2.662789e-07
-+      1.718876e-08 2.662789e-07
-+ Co = 1.277836e-10
-+      -8.268715e-12 1.277836e-10
++ Lo = 2.572535e-07
++      1.469908e-08 2.572535e-07
++ Co = 1.330640e-10
++      -7.615274e-12 1.330640e-10
 + Ro = 1.121241e+01
 +      0.000000e+00 1.121241e+01
 + Go = 0.000000e+00
 +      -0.000000e+00 0.000000e+00
-+ Rs = 2.685059e-03
-+      1.305979e-04 2.685059e-03
-+ Gd = 2.007220e-11
-+      -1.298847e-12 2.007220e-11
++ Rs = 2.680714e-03
++      1.210609e-04 2.680714e-03
++ Gd = 2.090165e-12
++      -1.196204e-13 2.090165e-12
 *************************************************************************
 *************************************************************************
 
